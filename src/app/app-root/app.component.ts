@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { take } from 'rxjs';
-import { BikeService } from './services/bike.service';
+import { BikeService } from '../services/bike.service';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app-root/app.component.html',
-  styleUrls: ['./app-root/app.component.scss']
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'Mr-bikes'

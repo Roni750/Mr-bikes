@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Bike } from '../models/bike.model';
+import { Bike } from '../../models/bike.model';
 
 @Component({
   selector: 'bike-preview',

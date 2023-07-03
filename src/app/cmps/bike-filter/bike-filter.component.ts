@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, pipe, takeUntil } from 'rxjs';
-import { BikeFilter } from '../models/bike.model';
-import { BikeService } from '../services/bike.service';
+import { BikeFilter } from '../../models/bike.model';
+import { BikeService } from '../../services/bike.service';
 
 @Component({
   selector: 'bike-filter',
