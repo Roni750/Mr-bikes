@@ -1,0 +1,5 @@
+<section class="bike-index">
+    <h1>Bike Index</h1>
+    <bike-filter></bike-filter>
+    <bike-list (removeBike)="onRemoveBike($event)" [bikes]="bikes$ | async"></bike-list>
+</section>
