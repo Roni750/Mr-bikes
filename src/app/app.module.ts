@@ -11,6 +11,8 @@ import { BikeListComponent } from './cmps/bike-list/bike-list.component';
 import { BikePreviewComponent } from './cmps/bike-preview/bike-preview.component';
 import { AboutComponent } from './pages/about/about.component';
 import { AppHeaderComponent } from './cmps/app-header/app-header.component';
+import { BikeDetailsComponent } from './pages/bike-details/bike-details.component';
+import { BikeEditComponent } from './pages/bike-edit/bike-edit.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { AppHeaderComponent } from './cmps/app-header/app-header.component';
     BikePreviewComponent,
     AboutComponent,
     AppHeaderComponent,
+    BikeDetailsComponent,
+    BikeEditComponent,
   ],
   imports: [
     BrowserModule,

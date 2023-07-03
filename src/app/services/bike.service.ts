@@ -22,7 +22,7 @@ export class BikeService {
             ...bike,
             _id: this._makeId()
           }))
-    
+
           localStorage.setItem(ENTITY, JSON.stringify(bikesWithId))
           this._bikes$.next(bikesWithId)
         },
@@ -70,7 +70,13 @@ export class BikeService {
   }
 
   public getEmptyBike() {
-    return { name: '' }
+    return {
+      make: '',
+      model: '',
+      power: '',
+      torque: '',
+      year: '',
+    }
   }
 
   public remove(bikeId: string) {

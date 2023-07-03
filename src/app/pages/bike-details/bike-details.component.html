@@ -1,0 +1,8 @@
+<h1>HELLO</h1>
+<section *ngIf="bike$ | async as bike" class="bike-details">
+    <p><b>Name:</b> {{bike.model}}</p>
+    <p><b>Age:</b> {{bike.year}}</p>
+    <section class="actions">
+        <button (click)="onBack()" class="back-btn">Back</button>
+    </section>
+</section>
