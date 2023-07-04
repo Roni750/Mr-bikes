@@ -1,0 +1,59 @@
+.bike-preview {
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    max-width: fit-content;
+    width: 200px;
+    transition: .3s box-shadow;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+
+    .actions {
+        opacity: 0;
+        transition: .3s opacity;
+    }
+
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        .actions {
+            align-self: end;
+            opacity: 1;
+        }
+    }
+
+    img {
+        width: 100%;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    }
+
+    .info {
+        padding-inline: 1em;
+    }
+
+    .make {
+        position: absolute;
+        color: white;
+        top: 0;
+        left: 5px;
+        font-size: 12px;
+    }
+
+    .model {
+        font-size: 18px;
+        font-weight: 600;
+        color: #394556;
+    }
+
+    .type {
+        color: rgb(151, 151, 151);
+        font-size: 12px;
+    }
+
+    // height: 12.5rem;
+    // width: 20rem;
+    // background-color: #ffffff1a;
+    // border-radius: 10px;
+    // cursor: pointer;
+    // position: relative;
+}

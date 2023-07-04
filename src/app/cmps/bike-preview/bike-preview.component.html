@@ -1,16 +1,15 @@
 <section class="bike-preview">
-    <section class="info">
-            <a [routerLink]="['bike', bike._id]" class="data">
-                <p>Name: {{bike.make}}</p>
-                <p>Name: {{bike.model}}</p>
-                <p>Year: {{bike.year}}</p>
-                <p>Torque: {{bike.power}}</p>
-                <p>Torque: {{bike.torque}}</p>
-            </a>
-        <section class="actions">
-            <a [routerLink]="['edit', bike._id]">Edit</a>
-            <button (click)="onRemoveBike($event)" class="remove-btn">X</button>
-        </section>
+    <a [routerLink]="['bike', bike._id]" class="data">
+        <img src="../../../assets/images/bike.png" />
+        <div class="info">
+            <p class="make">{{bike.make}} </p>
+            <p class="model">{{bike.model}} {{bike.year}}</p>
+            <p>{{bike.power}}</p>
+            <p class="type">{{bike.type}}</p>
+        </div>
+    </a>
+    <section class="actions">
+        <a [routerLink]="['edit', bike._id]">Edit</a>
+        <button (click)="onRemoveBike($event)" class="remove-btn">X</button>
     </section>
-    <!-- <img src="https://robohash.org/{{bike._id}}?set=set4" alt=""> -->
 </section>

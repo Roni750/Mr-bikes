@@ -1,7 +1,13 @@
-<header class="container">
-    <h1>Mr Bikes</h1>
-    <nav>
-        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
-        <a routerLink="/about" routerLinkActive="active">About</a>
-    </nav>
+<header>
+    <div class="header-navbar">
+        <h1>Mr Bikes</h1>
+        <nav>
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+            <a routerLink="/about" routerLinkActive="active">About</a>
+        </nav>
+        <nav class="nav-login">
+            <a routerLink="/login" routerLinkActive="active">Login</a>
+        </nav>
+    </div>
+    <!-- <hero></hero> -->
 </header>

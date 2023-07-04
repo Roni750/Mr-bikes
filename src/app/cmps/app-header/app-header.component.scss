@@ -1,9 +1,64 @@
 header {
-    height: 80px;
-    display: flex;
-    align-items: center;
-    background-color: #4caf50;
     color: whitesmoke;
-    margin-bottom: 30px;
     font-size: 1.2em;
+
+    position: relative;
+
+    .header-navbar {
+        position: absolute;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        padding: 1em;
+        width: 100%;
+        text-transform: uppercase;
+        font-family: Rajdhani;
+
+        nav {
+            justify-self: center;
+        }
+
+        a {
+            position: relative;
+            padding: .5em;
+            transition: color .4s, background-color .4s;
+
+            &::after {
+                content: "";
+                position: absolute;
+                height: 0px;
+                width: 0px;
+                background-color: red;
+                transition: width .4s;
+            }
+
+            &:hover {
+                background: white;
+                color: black;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 2px;
+                    width: 25px;
+                    background-color: red;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: 5px;
+                }
+            }
+        }
+
+        .nav-login {
+            width: fit-content;
+            max-height: 50px;
+            justify-self: end;
+        }
+
+        .active {
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3);
+        }
+    }
 }

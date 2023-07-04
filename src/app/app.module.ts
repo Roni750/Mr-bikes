@@ -13,6 +13,8 @@ import { AboutComponent } from './pages/about/about.component';
 import { AppHeaderComponent } from './cmps/app-header/app-header.component';
 import { BikeDetailsComponent } from './pages/bike-details/bike-details.component';
 import { BikeEditComponent } from './pages/bike-edit/bike-edit.component';
+import { HeroComponent } from './hero/hero.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { BikeEditComponent } from './pages/bike-edit/bike-edit.component';
     AppHeaderComponent,
     BikeDetailsComponent,
     BikeEditComponent,
+    HeroComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

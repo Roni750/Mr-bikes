@@ -1,3 +1,5 @@
-<section class="bike-list">
-    <bike-preview (removeBike)="removeBike.emit($event)" *ngFor="let bike of bikes" [bike]="bike" ></bike-preview>
-</section>
+<div class="bike-list-wrapper">
+    <section class="bike-list">
+        <bike-preview (removeBike)="removeBike.emit($event)" *ngFor="let bike of bikes" [bike]="bike"></bike-preview>
+    </section>
+</div>

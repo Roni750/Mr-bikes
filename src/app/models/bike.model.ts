@@ -5,6 +5,7 @@ export interface Bike {
     power: string
     torque: string
     year: string
+    type: string
 }
 
 export interface BikeFilter {

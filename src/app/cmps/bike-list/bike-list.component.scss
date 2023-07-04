@@ -1,0 +1,16 @@
+.bike-list-wrapper {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: minmax(20px, 200px) minmax(auto, 1fr) minmax(20px, 200px);
+
+    .bike-list {
+        grid-column: 2;
+        row-gap: 1em;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        grid-auto-flow: dense;
+        // column-gap: 1.5em;
+        justify-items: center;
+        background-color: rgb(250, 250, 250);
+    }
+}

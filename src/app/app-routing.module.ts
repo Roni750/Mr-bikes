@@ -6,6 +6,7 @@ import { BikeDetailsComponent } from './pages/bike-details/bike-details.componen
 import { BikeEditComponent } from './pages/bike-edit/bike-edit.component';
 import { bikeResolver } from './resolvers/bike-resolver.resolver';
 import { authGuard } from './guards/auth.guard';
+import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
   {
@@ -15,10 +16,16 @@ const routes: Routes = [
     resolve: { bike: bikeResolver }
   },
   { path: 'about', component: AboutComponent },
-  { path: '', component: BikeIndexComponent, children: [
-    { path: 'edit/:id', component: BikeEditComponent, resolve: {bike: bikeResolver} },
-    { path: 'edit', component: BikeEditComponent }
-  ] }
+  {
+    path: '', component: BikeIndexComponent, children: [
+      { path: 'edit/:id', component: BikeEditComponent, resolve: { bike: bikeResolver } },
+      { path: 'edit', component: BikeEditComponent }
+    ]
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  }
 ];
 
 @NgModule({
