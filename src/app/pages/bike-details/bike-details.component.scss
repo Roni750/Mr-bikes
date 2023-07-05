@@ -65,8 +65,6 @@
     .further-details {
         display: grid;
         grid-column: 2;
-        // grid-template-columns: auto;
-        // grid-auto-flow: column dense;
         width: 100%;
         grid-template-columns: repeat(10, auto);
         grid-auto-flow: dense;
@@ -78,5 +76,9 @@
                 color: white;
             }
         }
+    }
+
+    .back-btn {
+        cursor: pointer;
     }
 }

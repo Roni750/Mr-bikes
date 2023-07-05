@@ -5,7 +5,7 @@
         </h1>
     </div>
     <div class="index-actions">
-        <a routerLink="edit">Add bike</a>
+        <a class="add-btn" routerLink="edit">Add bike</a>
         <bike-filter></bike-filter>
     </div>
     <bike-list (removeBike)="onRemoveBike($event)" [bikes]="bikes$ | async"></bike-list>

@@ -1,5 +1,8 @@
 <section *ngIf="bike$ | async as bike" class="bike-details">
     <section class="main-details">
+        <section class="actions">
+            <fa-icon [icon]="faArrowLeft"  (click)="onBack()" class="back-btn" title="Back"></fa-icon>
+        </section>
         <section class="title">
             {{bike.make}}
         </section>
@@ -13,9 +16,6 @@
             <section class="middle">
                 <img src="../../../assets/images/{{bike.model}}.png" />
             </section>
-        </section>
-        <section class="actions">
-            <button (click)="onBack()" class="back-btn">Back</button>
         </section>
     </section>
     <div class="further-details-wrapper">

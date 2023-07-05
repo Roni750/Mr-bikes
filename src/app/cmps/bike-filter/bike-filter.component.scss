@@ -1,0 +1,16 @@
+.bike-filter {
+    input[type=text] {
+        height: 30px;
+        padding-inline: .5em;
+
+        &::placeholder {
+            opacity: 1;
+            transition: .3s opacity;
+        }
+        &:focus {
+            &::placeholder {
+                opacity: 0;
+            }
+        }
+    }
+}

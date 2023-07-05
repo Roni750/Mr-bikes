@@ -13,15 +13,15 @@ const ENTITY = 'bikes'
 export class BikeService {
 
   constructor(private http: HttpClient) {
-    // console.log("this.bikesJSON", this.bikesJSON())
-    localStorage.setItem(ENTITY, JSON.stringify(this.bikesJSON()))
-    // const bikes = JSON.parse(localStorage.getItem(ENTITY) || 'null')
+    // const bikes: Bike[] = []
+    // localStorage.setItem(ENTITY, JSON.stringify(this.bikesJSON()))
+    const bikes = JSON.parse(localStorage.getItem(ENTITY) || 'null')
     // console.log("bikes", bikes)
-    // if (!bikes || bikes.length === 0) {
-    //   localStorage.setItem(ENTITY, JSON.stringify(this.bikesJSON))
-    // } else {
-    //   this._bikes$.next(bikes)
-    // }
+    if (!bikes || bikes.length === 0) {
+      localStorage.setItem(ENTITY, JSON.stringify(this.bikesJSON()))
+    } else {
+      console.log("this activated", bikes)
+    }
   }
 
   // constructor(private http: HttpClient) {
@@ -401,7 +401,7 @@ export class BikeService {
         wheelbase: "1460 mm (57.5 inches)",
         fuel_capacity: "16.00 litres (4.23 US gallons)",
         starter: "Electric",
-        _id: "XSQpY"
+        _id: this._makeId(),
       },
       {
         _id: this._makeId(),

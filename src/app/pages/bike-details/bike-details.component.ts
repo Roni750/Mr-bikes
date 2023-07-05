@@ -1,10 +1,10 @@
 import { Location } from '@angular/common';
-import { Component, DestroyRef, EventEmitter, Input, OnDestroy, OnInit, Output, inject } from '@angular/core';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable, Subscription, catchError, lastValueFrom, map, switchMap } from 'rxjs';
+import { Observable, Subscription, map } from 'rxjs';
 import { Bike } from 'src/app/models/bike.model';
 import { BikeService } from 'src/app/services/bike.service';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -22,6 +22,7 @@ export class BikeDetailsComponent {
   @Output() back = new EventEmitter<void>()
   subscription!: Subscription
 
+  faArrowLeft = faArrowLeft
   ans = ''
   bike$!: Observable<Bike>
   bike!: Bike

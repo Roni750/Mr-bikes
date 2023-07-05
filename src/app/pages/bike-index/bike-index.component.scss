@@ -17,4 +17,17 @@
     background: #ED1D24;
     padding-block: 1em;
     gap: 1em;
+
+    .add-btn {
+        background: white;
+        padding-block: .2em;
+        padding-inline: .5em;
+        font-family: Rajdhani;
+        transition: color .4s;
+        color: black;
+
+        &:hover {
+            color: #ED1D24;
+        }
+    }
 }

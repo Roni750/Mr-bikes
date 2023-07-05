@@ -15,6 +15,8 @@ import { BikeDetailsComponent } from './pages/bike-details/bike-details.componen
 import { BikeEditComponent } from './pages/bike-edit/bike-edit.component';
 import { HeroComponent } from './hero/hero.component';
 import { LoginComponent } from './pages/login/login.component';
+import { AboutHeroComponent } from './cmps/about-hero/about-hero.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -29,12 +31,14 @@ import { LoginComponent } from './pages/login/login.component';
     BikeEditComponent,
     HeroComponent,
     LoginComponent,
+    AboutHeroComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
