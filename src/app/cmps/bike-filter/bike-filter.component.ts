@@ -32,5 +32,4 @@ export class BikeFilterComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.destroySubject$.next(null)
   }
-
 }

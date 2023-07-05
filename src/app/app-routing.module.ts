@@ -5,14 +5,14 @@ import { AboutComponent } from './pages/about/about.component';
 import { BikeDetailsComponent } from './pages/bike-details/bike-details.component';
 import { BikeEditComponent } from './pages/bike-edit/bike-edit.component';
 import { bikeResolver } from './resolvers/bike-resolver.resolver';
-import { authGuard } from './guards/auth.guard';
+import { AuthGuard } from './guards/auth.guard';
 import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
   {
     path: 'bike/:id',
     component: BikeDetailsComponent,
-    canActivate: [authGuard],
+    canActivate: [AuthGuard],
     resolve: { bike: bikeResolver }
   },
   { path: 'about', component: AboutComponent },

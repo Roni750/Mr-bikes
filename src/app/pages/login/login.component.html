@@ -2,5 +2,11 @@
 
 <section class="login">
     <h3>Login</h3>
-    <input placeholder="username" type="text">
+    <!-- <form>
+        <input [(ngModel)]="user" (ngModelChange)="onSetUsername($event)" placeholder="username" name="name" type="text">
+    </form> -->
+    <form (submit)="onLogin()">
+        <input type="text" placeholder="Enter your name.." [(ngModel)]="user.name" name="name" />
+        <button>Connect</button>
+    </form>
 </section>

@@ -1,0 +1,82 @@
+.bike-details {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: minmax(20px, 200px) minmax(auto, 1fr) minmax(20px, 200px);
+
+    margin-block-start: 5em;
+    background: #f8f1ef;
+
+    color: black;
+    font-weight: 800;
+    font-family: Rajdhani;
+
+    .main-details {
+        grid-column: 2;
+    }
+
+    .title {
+        font-size: 70px;
+        text-transform: uppercase;
+    }
+
+    .info-media {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        img {
+            width: 800px;
+        }
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        .specs::after {
+            content: "";
+            position: relative;
+            bottom: 0;
+            height: 1px;
+            background-color: #ff522a;
+            width: 50%;
+        }
+    }
+
+    .info {
+        color: #ff522a;
+    }
+
+    .specs {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .further-details-wrapper {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: minmax(20px, 200px) minmax(auto, 1fr) minmax(20px, 200px);
+        grid-column: 1 / -1;
+        background: #ff522a;
+        padding-block: 2em;
+    }
+
+    .further-details {
+        display: grid;
+        grid-column: 2;
+        // grid-template-columns: auto;
+        // grid-auto-flow: column dense;
+        width: 100%;
+        grid-template-columns: repeat(10, auto);
+        grid-auto-flow: dense;
+        column-gap: 1em;
+        padding-inline: 2em;
+
+        .specs {
+            .info {
+                color: white;
+            }
+        }
+    }
+}

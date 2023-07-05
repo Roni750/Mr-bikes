@@ -1,8 +1,67 @@
-<h1>HELLO</h1>
 <section *ngIf="bike$ | async as bike" class="bike-details">
-    <p><b>Name:</b> {{bike.model}}</p>
-    <p><b>Age:</b> {{bike.year}}</p>
-    <section class="actions">
-        <button (click)="onBack()" class="back-btn">Back</button>
+    <section class="main-details">
+        <section class="title">
+            {{bike.make}}
+        </section>
+        <section class="info-media">
+            <div class="left">
+                <div *ngIf="bike.torque" class="specs">Torque: <span class="info">{{bike.torque}}</span></div>
+                <div *ngIf="bike.power" class="specs">Horsepower: <span class="info">{{bike.power}}</span></div>
+                <div *ngIf="bike.displacement" class="specs">Displacement <span
+                        class="info">{{bike.displacement}}</span></div>
+            </div>
+            <section class="middle">
+                <img src="../../../assets/images/{{bike.model}}.png" />
+            </section>
+        </section>
+        <section class="actions">
+            <button (click)="onBack()" class="back-btn">Back</button>
+        </section>
     </section>
+    <div class="further-details-wrapper">
+        <section class="further-details">
+            <div *ngIf="bike.boreStroke" class="specs">Bore stroke: <span class="info">{{bike.boreStroke}}</span></div>
+            <div *ngIf="bike.clutch" class="specs">Clutch: <span class="info">{{bike.clutch}}</span></div>
+            <div *ngIf="bike.cooling" class="specs">Cooling: <span class="info">{{bike.cooling}}</span></div>
+            <div *ngIf="bike.displacement" class="specs">Bore stroke: <span class="info">{{bike.displacement}}</span>
+            </div>
+            <div *ngIf="bike.compression" class="specs">Compression: <span class="info">{{bike.compression}}</span>
+            </div>
+            <div *ngIf="bike.engine" class="specs">engine: <span class="info">{{bike.engine}}</span></div>
+            <div *ngIf="bike.frontBrakes" class="specs">Front brakes: <span class="info">{{bike.frontBrakes}}</span>
+            </div>
+            <div *ngIf="bike.frontSuspension" class="specs">Front suspension: <span
+                    class="info">{{bike.frontSuspension}}</span></div>
+            <div *ngIf="bike.frontTire" class="specs">Front tire: <span class="info">{{bike.frontTire}}</span></div>
+            <div *ngIf="bike.fuelCapacity" class="specs">Fuel capacity: <span class="info">{{bike.fuelCapacity}}</span>
+            </div>
+            <div *ngIf="bike.fuelControl" class="specs">Fuel control: <span class="info">{{bike.fuelControl}}</span>
+            </div>
+            <div *ngIf="bike.fuelSystem" class="specs">Fuel system: <span class="info">{{bike.fuelSystem}}</span></div>
+            <div *ngIf="bike.gearbox" class="specs">Gearbox: <span class="info">{{bike.gearbox}}</span></div>
+            <div *ngIf="bike.groundClearance" class="specs">Ground clearance:<span
+                    class="info">{{bike.groundClearance}}</span></div>
+            <div *ngIf="bike.ignition" class="specs">Ignition: <span class="info">{{bike.ignition}}</span></div>
+            <div *ngIf="bike.lubrication" class="specs">Lubrication: <span class="info">{{bike.lubrication}}</span>
+            </div>
+            <div *ngIf="bike.rearBrakes" class="specs">Rear brakes: <span class="info">{{bike.rearBrakes}}</span></div>
+            <div *ngIf="bike.rearSuspension" class="specs">Rear suspension: <span
+                    class="info">{{bike.rearSuspension}}</span></div>
+            <div *ngIf="bike.rearTire" class="specs">Rear tire: <span class="info">{{bike.rearTire}}</span></div>
+            <div *ngIf="bike.seatHeight" class="specs">Seat height: <span class="info">{{bike.seatHeight}}</span></div>
+            <div *ngIf="bike.starter" class="specs">Starter: <span class="info">{{bike.starter}}</span></div>
+            <div *ngIf="bike.totalHeight" class="specs">Total height: <span class="info">{{bike.totalHeight}}</span>
+            </div>
+            <div *ngIf="bike.totalLength" class="specs">Total length: <span class="info">{{bike.totalLength}}</span>
+            </div>
+            <div *ngIf="bike.totalWeight" class="specs">Total weight: <span class="info">{{bike.totalWeight}}</span>
+            </div>
+            <div *ngIf="bike.totalWidth" class="specs">Total width: <span class="info">{{bike.totalWidth}}</span></div>
+            <div *ngIf="bike.transmission" class="specs">Transmission: <span class="info">{{bike.transmission}}</span>
+            </div>
+            <div *ngIf="bike.type" class="specs">Type: <span class="info">{{bike.type}}</span></div>
+            <div *ngIf="bike.wheelbase" class="specs">Wheelbase: <span class="info">{{bike.wheelbase}}</span></div>
+            <div *ngIf="bike.year" class="specs">Year: <span class="info">{{bike.year}}</span></div>
+        </section>
+    </div>
 </section>

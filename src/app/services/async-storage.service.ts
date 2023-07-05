@@ -1,4 +1,5 @@
 import { Bike } from "../models/bike.model"
+import { User } from "../models/user.model"
 
 export const storageService = {
     query,
@@ -9,7 +10,7 @@ export const storageService = {
     makeId
 }
 
-type Entity = Bike
+type Entity = any
 
 async function query(entityType: string, delay = 100): Promise<Entity[]> {
     var entities = JSON.parse(localStorage.getItem(entityType) || 'null') || []

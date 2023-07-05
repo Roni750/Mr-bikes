@@ -9,8 +9,15 @@
     position: relative;
 
     .actions {
+        display: flex;
         opacity: 0;
         transition: .3s opacity;
+        font-size: 12px;
+        gap: .5em;
+        padding-inline-end: .5em;
+        color: rgb(163, 163, 163);
+        font-family: Rajdhani;
+        text-transform: uppercase;
     }
 
     &:hover {
@@ -33,10 +40,13 @@
 
     .make {
         position: absolute;
-        color: white;
+        color: rgb(245, 103, 103);
+        font-family: Rajdhani;
+        text-transform: uppercase;
         top: 0;
         left: 5px;
         font-size: 12px;
+        opacity: 0.6;
     }
 
     .model {

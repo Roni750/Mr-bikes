@@ -5,9 +5,11 @@
             <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
             <a routerLink="/about" routerLinkActive="active">About</a>
         </nav>
-        <nav class="nav-login">
+        <nav *ngIf="loggedIn" class="nav-login">
+            <a (click)="onLogout()">Logout</a>
+        </nav>
+        <nav *ngIf="!loggedIn" class="nav-login">
             <a routerLink="/login" routerLinkActive="active">Login</a>
         </nav>
     </div>
-    <!-- <hero></hero> -->
 </header>

@@ -2,6 +2,7 @@
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-template-columns: minmax(20px, 200px) minmax(auto, 1fr) minmax(20px, 200px);
+    margin-block: 5em;
 
     .bike-list {
         grid-column: 2;
@@ -11,6 +12,5 @@
         grid-auto-flow: dense;
         // column-gap: 1.5em;
         justify-items: center;
-        background-color: rgb(250, 250, 250);
     }
 }

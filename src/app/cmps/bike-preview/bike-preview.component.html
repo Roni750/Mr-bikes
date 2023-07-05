@@ -1,15 +1,16 @@
 <section class="bike-preview">
     <a [routerLink]="['bike', bike._id]" class="data">
-        <img src="../../../assets/images/bike.png" />
+        <!-- <img src="../../../assets/images/bike.png" /> -->
+        <img src="../../../assets/images/{{bike.model}}.png" />
         <div class="info">
             <p class="make">{{bike.make}} </p>
             <p class="model">{{bike.model}} {{bike.year}}</p>
-            <p>{{bike.power}}</p>
+            <p *ngIf="bike.power">Horsepower: {{bike.power}}</p>
             <p class="type">{{bike.type}}</p>
         </div>
     </a>
     <section class="actions">
         <a [routerLink]="['edit', bike._id]">Edit</a>
-        <button (click)="onRemoveBike($event)" class="remove-btn">X</button>
+        <a (click)="onRemoveBike($event)" class="remove-btn">Remove</a>
     </section>
 </section>

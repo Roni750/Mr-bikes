@@ -1,10 +1,13 @@
 <section class="bike-index">
     <hero></hero>
     <div class="index-title">
-        <h1>Bike Index</h1>
+        <h1>Your National Online Pre-Owned Motorcycle Dealership
+        </h1>
     </div>
-    <a routerLink="edit">Add bike</a>
-    <bike-filter></bike-filter>
+    <div class="index-actions">
+        <a routerLink="edit">Add bike</a>
+        <bike-filter></bike-filter>
+    </div>
     <bike-list (removeBike)="onRemoveBike($event)" [bikes]="bikes$ | async"></bike-list>
 </section>
 
