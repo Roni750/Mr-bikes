@@ -1,10 +1,13 @@
 <section *ngIf="bike$ | async as bike" class="bike-details">
     <section class="main-details">
         <section class="actions">
-            <fa-icon [icon]="faArrowLeft"  (click)="onBack()" class="back-btn" title="Back"></fa-icon>
+            <fa-icon [icon]="faArrowLeft" (click)="onBack()" class="back-btn" title="Back"></fa-icon>
         </section>
         <section class="title">
             {{bike.make}}
+        </section>
+        <section class="sub-title">
+            {{bike.model}} Specs:
         </section>
         <section class="info-media">
             <div class="left">
